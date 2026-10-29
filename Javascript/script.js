@@ -45,3 +45,28 @@ function addNumbers() {
     let numAdd = num1 + num2;
     document.getElementById("sum").textContent = `The sum is: ${numAdd}`;
 }
+
+function getLength() {
+    let userString = document.getElementById("userString").value;
+    let stringLength = userString.length;
+    document.getElementById("lengthOutput").textContent = `"${userString}" has ${stringLength} characters.`
+}
+
+let tempPassword = "";
+function revealPassword() {
+    let password = document.getElementById("password").value;
+    let showPassword = document.getElementById("showPassword");
+    let asteriskPassword = "";
+    for (let i=0; i<password.length; i++)
+    {
+        asteriskPassword += "*";
+    }
+    if (showPassword.checked) {
+        tempPassword = password;
+        document.getElementById("password").value = asteriskPassword;
+    }
+
+    else {
+        document.getElementById("password").value = tempPassword;
+    }
+}

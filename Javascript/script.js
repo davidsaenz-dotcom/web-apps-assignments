@@ -57,8 +57,7 @@ function revealPassword() {
     let password = document.getElementById("password").value;
     let showPassword = document.getElementById("showPassword");
     let asteriskPassword = "";
-    for (let i=0; i<password.length; i++)
-    {
+    for (let i = 0; i < password.length; i++) {
         asteriskPassword += "*";
     }
     if (showPassword.checked) {
@@ -69,4 +68,20 @@ function revealPassword() {
     else {
         document.getElementById("password").value = tempPassword;
     }
+}
+
+function revealPassword2() {
+    let showPassword2 = document.getElementById("showPassword2");
+    if (showPassword2.checked) {
+        document.getElementById("password2").type = "text";
+    }
+
+    else {
+        document.getElementById("password2").type = "password";
+    }
+}
+
+function changeStyle() {
+    let customText = document.getElementById("customText");
+    customText.style = "display: inline-block; font-size: 100px; color: green; border: 5px; border-color: red; padding: 3px; border-radius: 1px;";
 }

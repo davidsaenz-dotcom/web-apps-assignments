@@ -1,69 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- Greeting based on time of day -->
-     <h3>Example 1: Dynamic Greeting</h3>
-     <div id="greetingOutput">
-     </div>
+    <h3>Example 1: Dynamic Greeting</h3>
+    <div id="greetingOutput">
+    </div>
 
-     <!-- Show text when I click a button -->
-      <h3>Example 2: Button Click Event Handling</h3>
-     <button onclick="setButtonText()">Click Me</button>
-     <div id="buttonClickText"></div>
+    <!-- Show text when I click a button -->
+    <h3>Example 2: Button Click Event Handling</h3>
+    <!-- Calls setButtonText() whenever the button's clicked. -->
+    <button onclick="setButtonText()">Click Me</button>
+    <div id="buttonClickText"></div>
 
-     <button onclick="newButtonText()">CLICK ME AS WELL</button>
-     <div id="newButtonText"></div>
+    <!-- Calls newButtonText() whenever the button's clicked. I do this for many other interactive elements. -->
+    <button onclick="newButtonText()">CLICK ME AS WELL</button>
+    <div id="newButtonText"></div>
 
-     <button onclick="setButtonTextDate()">NOW CLICK MEEEEEEEEEEEEEE, for Date and Time</button>
-     <div id="buttonClickDate"></div>
+    <!-- Now this one displays the current date and time when clicked. -->
+    <button onclick="setButtonTextDate()">NOW CLICK MEEEEEEEEEEEEEE, for Date and Time</button>
+    <div id="buttonClickDate"></div>
 
-     <h3>Example 4: JavaScript Numeric Values</h3>
-     <label for="addNum1">First Number: </label>
-     <input type="number" id="addNum1" name="addNum1">
-     <br>
-     <label for="addNum2">Second Number: </label>
-     <input type="number" id="addNum2" name="addNum2">
-     <br>
-     <button onclick="addNumbers()">Add Them Together</button>
-     <div id="sum"></div>
+    <h3>Example 4: JavaScript Numeric Values</h3>
+    <label for="addNum1">First Number: </label>
+    <!-- I get the data for my JS method from these text input sections. -->
+    <input type="number" id="addNum1" name="addNum1">
+    <br>
+    <label for="addNum2">Second Number: </label>
+    <input type="number" id="addNum2" name="addNum2">
+    <br>
+    <button onclick="addNumbers()">Add Them Together</button>
+    <div id="sum"></div>
 
-     <h3>Example 5:  Length of String</h3>
-     <input type="text" id="userString" name="userString">
-     <button onclick="getLength()">Try it</button>
-     <div id="lengthOutput"></div>
+    <!-- This gets the length of the inputted string and outputs it. -->
+    <h3>Example 5: Length of String</h3>
+    <input type="text" id="userString" name="userString">
+    <button onclick="getLength()">Try it</button>
+    <div id="lengthOutput"></div>
 
-     <h3>Example 6a: Toggle password display</h3>
-     <input type="text" id="password" name="password">
-     <label for="showPassword">Hide Password</label>
-     <input onchange="revealPassword()" type="checkbox" id="showPassword">
+    <!-- These toggle the password visibility. But one literally turns the string into a string of stars equal to the length of the original password enter.
+      The first one only works if you don't change the password after toggling, the second one works better. -->
+    <h3>Example 6a: Toggle password display</h3>
+    <input type="text" id="password" name="password">
+    <label for="showPassword">Hide Password</label>
+    <input onchange="revealPassword()" type="checkbox" id="showPassword">
 
-     <h3>Example 6b: Toggle password display</h3>
-     <input type="password" id="password2" name="password2">
-     <label for="showPassword2">Show Password</label>
-     <input onchange="revealPassword2()" type="checkbox" id="showPassword2">
+    <!-- This one is the better way to toggle password visibility. It sets the type of the input to password and then changes it to text when the checkbox is clicked. -->
+    <h3>Example 6: Toggle password display</h3>
+    <input type="password" id="password2" name="password2">
+    <label for="showPassword2">Show Password</label>
+    <input onchange="revealPassword2()" type="checkbox" id="showPassword2">
 
-     <h3>Example 7: Change the font size/color</h3>
-     <p class="changeStyle" 
-     style="display: inline-block;
+    <!-- In this example, clicking the button will change the styling of the text right before it. Clicking twice will return the styling to what it was originally. -->
+    <h3>Example 7: Change the font size/color</h3>
+    <p class="changeStyle" style="display: inline-block;
      font-size: large;
-     border: 5px;
+     border-style: solid;
+     border-width: 2px;
      border-color: green;
      padding: 3px;
-     border-radius: 2px;
+     border-radius: 4px;
      color: red;
-     "
-     id="customText">Click the button below to change this text!</p> 
-     <button onclick="changeStyle()">Change Style!</button>
+     " id="customText">Click the button below to change this text!</p>
+    <button onclick="changeStyle()">Change Style!</button>
 
-     <script src="script.js"></script>
+    <!-- In this example, clicking the button will cause the message to dissapear completely, and make it reappear when clicked again. -->
+    <h3>Example 8: Hide/Show HTML elements</h3>
+    <button onclick="textDissapear()">Toggle Display!</button>
+    <div id="moodyMessage">This is a moody message!</div>
 
-     <h3>Example 8: Hide/Show HTML elements</h3>
-     <button onclick="textDissapear()">Toggle Display!</button>
-     <div id="moodyMessage">This is a moody message!</div>
+    <script src="script.js"></script>
 </body>
+
 </html>
